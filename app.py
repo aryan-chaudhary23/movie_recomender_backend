@@ -49,7 +49,7 @@ def serve_static_files(path):
     return send_from_directory(app.static_folder, path)
 
 # Allow CORS
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, origins=["https://movie-recomender-frontend.onrender.com"])
 
 if __name__ == "__main__":
     from waitress import serve
